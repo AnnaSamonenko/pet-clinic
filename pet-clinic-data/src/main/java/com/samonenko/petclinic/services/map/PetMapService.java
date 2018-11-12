@@ -18,16 +18,16 @@ public class PetMapService extends AbstractMapService<Pet, Long> {
 
     @Override
     public Pet save(Pet object) {
-        return null;
+        return super.save(object.getId(), object);
     }
 
     @Override
     public void delete(Pet object) {
-
+        super.delete(object);
     }
 
     @Override
     public void deleteById(Long id) {
-
+        super.deleteById(id);
     }
 }
