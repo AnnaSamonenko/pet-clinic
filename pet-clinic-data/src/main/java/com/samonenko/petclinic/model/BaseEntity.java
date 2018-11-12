@@ -3,9 +3,12 @@ package com.samonenko.petclinic.model;
 import lombok.Getter;
 import lombok.Setter;
 
-public class PetType extends BaseEntity {
+import java.io.Serializable;
+
+public class BaseEntity implements Serializable {
 
     @Getter
     @Setter
-    private String type;
+    private Long id;
+
 }
