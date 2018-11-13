@@ -1,10 +1,14 @@
 package com.samonenko.petclinic.services.map;
 
 import com.samonenko.petclinic.model.Vet;
+import com.samonenko.petclinic.services.OwnerService;
+import com.samonenko.petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class VetMapService extends AbstractMapService<Vet, Long> {
+@Service
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
@@ -18,7 +22,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> {
 
     @Override
     public Vet save(Vet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
@@ -30,4 +34,6 @@ public class VetMapService extends AbstractMapService<Vet, Long> {
     public void delete(Vet object) {
         super.delete(object);
     }
+
+
 }
