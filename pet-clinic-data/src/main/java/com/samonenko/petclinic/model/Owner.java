@@ -3,6 +3,7 @@ package com.samonenko.petclinic.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Owner extends Person {
@@ -21,6 +22,6 @@ public class Owner extends Person {
 
     @Getter
     @Setter
-    Set<Pet> pets;
+    Set<Pet> pets = new HashSet<>();
 
 }
