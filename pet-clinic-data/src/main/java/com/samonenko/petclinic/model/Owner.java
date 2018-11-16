@@ -10,23 +10,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
 public class Owner extends Person {
 
-    @Getter
-    @Setter
     private String city;
 
-    @Getter
-    @Setter
     private String address;
 
-    @Getter
-    @Setter
     private String telephone;
 
-    @Getter
-    @Setter
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     Set<Pet> pets = new HashSet<>();
-
 }

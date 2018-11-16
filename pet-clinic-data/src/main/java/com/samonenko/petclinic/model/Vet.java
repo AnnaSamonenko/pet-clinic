@@ -7,11 +7,11 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
 @Entity
 public class Vet extends Person {
 
-    @Getter
-    @Setter
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "vet_specialitiez", joinColumns = @JoinColumn(name = "vet_id"),
             inverseJoinColumns = @JoinColumn(name = "speciality_id"))

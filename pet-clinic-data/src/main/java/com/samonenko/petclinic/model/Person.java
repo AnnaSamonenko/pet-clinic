@@ -6,15 +6,13 @@ import lombok.Setter;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotEmpty;
 
+@Getter
+@Setter
 @MappedSuperclass
 public class Person extends BaseEntity {
 
-    @Getter
-    @Setter
     @NotEmpty
     private String firstName;
 
-    @Getter
-    @Setter
     private String lastName;
 }

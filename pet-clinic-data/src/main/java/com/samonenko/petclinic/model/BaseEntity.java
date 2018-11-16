@@ -9,11 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
+@Getter
+@Setter
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
-    @Getter
-    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -8,19 +8,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
+@Getter
+@Setter
 @Entity
 public class Visit extends BaseEntity {
 
-    @Getter
-    @Setter
     private LocalDate date;
 
-    @Getter
-    @Setter
     private String description;
 
-    @Getter
-    @Setter
     @ManyToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
