@@ -3,9 +3,13 @@ package com.samonenko.petclinic.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Owner extends Person {
 
     @Getter
@@ -22,6 +26,7 @@ public class Owner extends Person {
 
     @Getter
     @Setter
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     Set<Pet> pets = new HashSet<>();
 
 }
