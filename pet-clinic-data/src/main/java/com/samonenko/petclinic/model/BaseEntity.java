@@ -1,6 +1,7 @@
 package com.samonenko.petclinic.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
@@ -18,4 +20,7 @@ public class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public BaseEntity(Long id) {
+        this.id = id;
+    }
 }
