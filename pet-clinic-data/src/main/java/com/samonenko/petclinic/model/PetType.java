@@ -13,4 +13,9 @@ import javax.persistence.Entity;
 public class PetType extends BaseEntity {
 
     private String type;
+
+    @Override
+    public String toString() {
+        return type;
+    }
 }
